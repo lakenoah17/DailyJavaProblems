@@ -1,5 +1,7 @@
 package Sept_23_2020;
 
+import java.util.HashSet;
+
 public class AdditionArray {
     //This problem was recently asked by Google.
     //
@@ -11,9 +13,9 @@ public class AdditionArray {
 
     public static void main(String[] args){
         int[] nums = {10, 15, 3, 7};
-        System.out.println(solution1(nums, 17));
-        System.out.println(solution1(nums, 25));
-        System.out.println(solution1(nums, 11));
+        System.out.println(solution2(nums, 17));
+        System.out.println(solution2(nums, 25));
+        System.out.println(solution2(nums, 11));
     }
 
     //Checks all possibilities of adding nums together
@@ -40,8 +42,12 @@ public class AdditionArray {
     //Returns: whether two numbers in array add together to equal
     //the specified sum or not
     public static boolean solution2(int[] nums, int numToAddTo){
-        for (int i = 0; i < nums.length; i++){
-
+        HashSet<Integer> numsHash = new HashSet<>();
+        for (int num : nums){
+            if (numsHash.contains(numToAddTo - num)){
+                return true;
+            }
+            numsHash.add(num);
         }
         return false;
     }
