@@ -1,8 +1,8 @@
-package Sept_23_2020;
+package September_2020;
 
 import java.util.HashSet;
 
-public class AdditionArray {
+public class Sept_23 {
     //This problem was recently asked by Google.
     //
     //Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
