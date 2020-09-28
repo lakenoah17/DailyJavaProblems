@@ -15,7 +15,7 @@ public class Main {
     //    return pair
     //Implement car and cdr.
     public static void main(String[] args){
-        Pair<Integer, Integer> coords = new Pair<>(6,9);
+        Pair<Integer, Integer> coords = new Pair<>(4,9);
 
         System.out.println(coords.getVal1());
         System.out.println(coords.getVal2());
